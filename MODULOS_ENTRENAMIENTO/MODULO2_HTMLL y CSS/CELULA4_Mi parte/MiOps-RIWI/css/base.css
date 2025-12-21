@@ -1,0 +1,36 @@
+
+
+:root{
+    --color-fondo:rgb(14, 5, 56);
+    --color-securdario:rgb(38, 22, 110);
+    --color-botones:rgb(69, 13, 224);
+    --texto_fuente:'Courier New', Courier, monospace;
+    --color-texto:rgb(255, 255, 255);
+    --color-texto-secundario:black;
+    --cajas:rgba(238, 230, 204, 0.5);
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    background: var(--color-fondo);
+    font-family: var(--texto_fuente);
+    color:var(--color-texto)
+}
+section{
+    height: 200px;
+    width: 200px;
+    background: var(--cajas);
+    color: var(--color-texto-secundario);
+}
+
+div{
+    height: 100px;
+    width: 100px;
+    background: var(--color-botones);
+    
+}
+article{
+    background: var(--color-securdario);
+    height: 200px;
+    width: 200px;
+}

@@ -1,0 +1,12 @@
+Tareas Desarrollo:
+
+- Código que recorra desde la posición 0 hasta la cantidad que se ingrese por terminal. Imprimir si el resultado o posición es par o impar.
+
+- Programa que permita pasar de número decimal a número binario
+
+
+################################################################
+
+Para el Martes 11 de Noviembre:
+
+Paradigma funcional

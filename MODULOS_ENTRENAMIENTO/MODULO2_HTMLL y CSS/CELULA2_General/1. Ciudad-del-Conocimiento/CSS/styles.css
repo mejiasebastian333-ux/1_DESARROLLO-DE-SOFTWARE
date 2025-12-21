@@ -1,0 +1,373 @@
+
+:root {
+    --bg-body: #f3f3f3;
+    --header-bg: #003a63;
+    --header-text: #ffffff;
+
+    --nav-bg: #005a99;
+    --nav-text: #ffffff;
+
+    --section-bg: #ffffff;
+
+    --article-bg: #e6f2ff;
+    --article-border: #005a99;
+
+    --card-bg: #005a99;
+    --card-border: #003a63;
+    --card-text: #ffffff;
+
+    --footer-bg: #003a63;
+    --footer-text: #ffffff;
+
+    --shadow-color: rgba(0, 0, 0, 0.55);
+}
+
+/* html, body {
+    height: 100%;
+    margin: 0;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-body);
+     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: var(--nav-bg);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 30px;
+    background: var(--section-bg);
+}
+
+article {
+    background: var(--article-bg);
+    padding: 20px;
+    margin: 20px;
+    border-left: 10px solid var(--article-border);
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.mente img{
+    width: 350px;
+    position: absolute;
+    right:40px;
+    top: -1px;
+    animation: float 3s ease-in-out infinite;
+
+
+}
+.servicios {
+    padding: 20px;
+    background: var(--section-bg);
+}
+
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+
+
+}
+
+.cards h2{
+    font-size: 3rem;
+}
+.cartas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    gap: 20px;
+}
+.cards img{
+    filter: brightness(80%);
+
+}
+.cards {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    color: var(--card-text);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1rem solid var(--card-border);
+    border-left: 1rem solid var(--card-border);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 20px var(--shadow-color);
+}
+
+
+.cardOne {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+
+   
+}
+
+.cardTwo {
+    display: flex;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.cardThree {
+    display: flex;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.cardFour {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+}
+
+.cardFive {
+    display: flex;
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+}
+
+
+
+
+.cardOne img{
+    width: 500px;
+    position: absolute;
+    right: 20px;
+    top: -25px;
+
+
+}
+
+.cardTwo img{
+
+    width: 400px;
+    position: absolute;
+    right: -130px;
+    top: -10px;
+}
+
+.cardThree img{
+    width: 250px;
+     position: absolute;
+    right: 40px;
+    top: -10px;
+
+
+}
+
+.cardFour h2{
+    z-index: 1;
+}
+
+.cardFour img{
+    width: 300px;
+    position: absolute;
+    right:-30px;
+    top: 40px;
+}
+
+.cardFive img{
+     width: 700px;
+    position: absolute;
+    right:-30px;
+    top: -90px;
+}
+
+.portal{
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.info-index, h2 p{
+    text-align: center;
+}
+
+
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+
+
+/* CSS Contacto.html*/
+
+#contact-section {
+    background: white;
+    color: var(--header-bg);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    gap: 20px;         /* separación entre los fieldsets */
+    flex-wrap: wrap;
+    border-radius: 1.5rem;
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    margin-top: 3rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15); /**/
+}
+#contact-form{
+    display: grid;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: start;
+    justify-items: start;
+    background: var(--header-bg);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.form1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+legend {
+    background: var(--header-bg);
+    color : var(--header-text)
+}
+
+label {
+    color : var(--header-text)
+}
+
+
+/*CSS Biblioteca */
+
+.book-cover {
+    width: 300px;      /* el ancho que quieras */
+    height: 400px;     /* el alto que quieras */
+     /* recorta la imagen sin deformarla */
+    border-radius: 8px; /* opcional */
+    object-fit: cover; 
+}
+
+.library-section {
+    display: flex;
+
+}.library-title {
+    margin: 0 auto 0 auto;
+    width: 220px;
+
+}
+
+.book-catalog {
+    display: grid;
+    gap: 20px; /* espacio entre tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    padding: 20px 0;
+}
+
+.book-card {
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    padding: 1rem;
+    transition: transform 0.5s, box-shadow 0.5s;
+
+}
+
+.book-card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.473);
+}
+
+footer {
+  
+    margin-top: auto;
+    background: #003a63;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 1809px;
+}
+ 
+.resource-list  a {
+    text-decoration: none;
+    color : black;
+    transition: color 0.5s;
+
+
+}
+
+.resource-list  a:hover {
+    color: var(--article-border);
+}
+.resource-list li {
+    list-style: none;
+}
+
+.resource-list {
+    display: flex;
+    gap: 2rem;
+}
+
+
+
+.materiales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    flex-direction: column;
+
+}
+
+fieldset {
+    width: 97%;
+}
+
+input {
+
+    margin: 1.5rem;
+}

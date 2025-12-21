@@ -1,0 +1,179 @@
+/* -------------------------
+   ESTILOS GENERALES
+-------------------------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+h1, h2, h3 {
+    margin: 20px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+/* -------------------------
+   HEADER Y NAVEGACIÓN (FLEXBOX)
+-------------------------- */
+
+header {
+    background: #004466;
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between; /* Distribuye título y navegación */
+    align-items: center;           /* Centra verticalmente */
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly; /* Distribución uniforme de enlaces */
+    gap: 30px;
+}
+
+header nav ul li a,
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover,
+header nav a:hover {
+    color: #ffd34f;
+}
+
+/* -------------------------
+   SECCIONES PRINCIPALES
+-------------------------- */
+
+#sobre-mi {
+    background: #ffffff;
+}
+
+#proyectos {
+    background: #e8f2ff;
+}
+
+#contacto {
+    background: #ffffff;
+}
+
+/* -------------------------
+   PROYECTOS (GRID LAYOUT)
+-------------------------- */
+
+#proyectos ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Separación entre tarjetas */
+}
+
+#proyectos li {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#proyectos a {
+    color: #004466;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#proyectos a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------
+   FORMULARIO DE CONTACTO
+-------------------------- */
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+}
+
+button {
+    background: #004466;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #006699;
+}
+
+/* -------------------------
+   GALERÍA DE MASCOTAS
+   FLEXBOX + GRID
+-------------------------- */
+
+#galeria-mascotas {
+    display: grid; /* Grid para efecto mosaico */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+#galeria-mascotas article {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+#galeria-mascotas img {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 100px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* -------------------------
+   PIE DE PÁGINA
+-------------------------- */
+
+footer {
+    background: #002f44;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}

@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <h1 class="title">CONTACTO</h1>
+    </header>
+
+    <nav class="navbar">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="actividades.html" class="nav-link">Actividades</a>
+                <a href="biblioteca.html" class="nav-link">Biblioteca</a>
+                <a href="cursos.html" class="nav-link">Cursos</a>
+                <a href="profesores.html" class="nav-link">Profesores</a>  
+        </nav>
+
+    <section id="contact-section">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-description">
+            Puedes comunicarte con nosotros en cualquier momento. Nuestro horario de atención es de lunes a viernes de 8:00 a 17:00, y estamos ubicados en la Ciudad del Conocimiento, Edificio Central.
+        </p>
+
+        <form action="#" method="post" id="contact-form">
+
+            <fieldset class="form1">
+                <legend>Información Personal</legend>
+
+                
+                <input placeholder="Nombre" type="text" id="nombre" name="nombre" class="input-field" required>
+
+                <input placeholder="Apellidos" type="text" id="apellidos" name="apellidos" class="input-field" required>
+
+                <input placeholder="Correo electrónico" type="email" id="correo" name="correo" class="input-field" required>
+
+
+                <input placeholder="Teléfono" type="tel" id="telefono" name="telefono" class="input-field" required>
+            </fieldset>
+
+            <fieldset class="form2">
+                <legend>Detalles de la Consulta</legend>
+
+                <label for="tipo">Tipo de consulta:</label>
+                <select id="tipo" name="tipo" class="input-field" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="informacion">Solicitud de información</option>
+                    <option value="curso">Dudas sobre cursos</option>
+                    <option value="profesores">Información sobre profesores</option>
+                    <option value="actividades">Consultas sobre actividades</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" class="input-field" required></textarea>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="suscripcion" name="suscripcion">
+                    Deseo suscribirme al boletín informativo
+                </label>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </fieldset>
+
+            
+
+        </form>
+    </section>
+
+    <footer id="footercontact">
+        <h3>Creado por:</h3>
+        <p>Carlos D Castaño</p>
+    </footer>
+
+</body>
+
+</html>

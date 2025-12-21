@@ -1,0 +1,402 @@
+/* styles.css */
+/* Archivo de estilos principal del proyecto.
+   Define la apariencia visual completa del sitio:
+   tipografías, colores, layout con Flexbox y Grid,
+   efectos hover y diseño responsive. */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+   Importación de fuentes desde Google Fonts.
+   Bebas Neue se usa principalmente para títulos
+   y Montserrat como fuente secundaria.
+*/
+
+/* ==============================
+   RESET Y ESTILOS GENERALES
+================================ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #18171D;
+}
+
+/* Estilos generales para imágenes */
+img {
+    max-width: 100%;
+}
+
+/* Contenedor reutilizable para centrar contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==============================
+   HEADER / ENCABEZADO PRINCIPAL
+================================ */
+
+.header{
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(
+        90deg,
+        rgba(47,28,42,1) 0%,
+        rgba(45,54,61,1) 50%,
+        rgba(19,41,65,1) 100%
+    );
+}
+
+/* Contenedor del menú superior */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo del sitio */
+.logo {
+    font-size: 25px;
+    color: #BA8250;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* Lista de navegación */
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+/* Enlaces del menú */
+.menu .navbar ul li a{
+    font-size: 17px;
+    padding: 20px;
+    color: #DFDDE0;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* Efecto hover en enlaces del menú */
+.menu .navbar ul li a:hover {
+    color: #BA8250;
+}
+
+/* Checkbox oculto para menú responsive */
+#menu {
+    display: none;
+}
+
+/* Ícono del menú hamburguesa */
+.menu-icono{
+    width: 25px;
+}
+
+/* Label que activa el menú responsive */
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* ==============================
+   SUBMENÚ / CARRITO DE COMPRAS
+================================ */
+
+.submenu {
+    position: relative;
+}
+
+/* Carrito oculto por defecto */
+.submenu #carrito {
+    display: none;
+}
+
+/* Mostrar carrito al pasar el mouse */
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4E4B5076;
+    padding: 20px;
+    min-width: 400px;
+}
+
+/* Tabla del carrito */
+table {
+    width: 100%;
+}
+
+/* Celdas y encabezados del carrito */
+th, td {
+    color: #DFDDE0;
+}
+
+/* Botón para eliminar productos del carrito */
+.borrar{
+    background-color: #BA8250;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #DFDDE0;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* ==============================
+   CONTENIDO DEL HEADER
+================================ */
+
+.header-txt {
+    text-align: center;
+}
+
+/* Título principal */
+.header-txt h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 90px;
+    color: #838586;
+}
+
+/* Texto descriptivo */
+.header-txt p {
+    font-size: 20px;
+    color: #DFDDE0;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+}
+
+/* Imagen principal del header */
+.header-txt img {
+    width: 600px;
+    display: block;
+}
+
+/* Botones reutilizables */
+.btn-1, .btn-2 {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #BA8250;
+    color: #DFDDE0;
+    font-family: 'Bebas Neue' sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* ==============================
+   SECCIÓN NOSOTROS
+================================ */
+
+.about {
+    padding: 120px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Imagen de la sección */
+.about-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.about-img img {
+    width: 350px;
+}
+
+/* Texto de la sección */
+.about-txt {
+    flex-basis: 50%;
+}
+
+/* Títulos generales */
+h2 {
+    color: #DFDDE0;
+    font-size: 80px;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Párrafos generales */
+p {
+    font-size: 16px;
+    color: #DFDDE0;
+}
+
+/* ==============================
+   SECCIÓN PRODUCTOS (GRID)
+================================ */
+
+.products {
+    padding: 0 0 200px 0;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 50px;
+}
+
+/* Contenedor grid de productos */
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+}
+
+/* Títulos de productos */
+h3 {
+    color: #DFDDE0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* Precio del producto */
+.precio {
+    color: #BA8250;
+    font-weight: 800;
+    padding: 10px 0;
+    margin: 0;
+}
+
+/* Botón agregar al carrito */
+.btn-2 {
+    margin: 0;
+    padding: 8px 35px ;
+}
+
+/* ==============================
+   FOOTER / PIE DE PÁGINA
+================================ */
+
+.footer {
+    border-top: 1px solid #BA815065;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Títulos del footer */
+.link h3 {
+    font-size: 22px;
+}
+
+/* Enlaces del footer */
+.link a {
+    font-size: 16px;
+    color: #C0C0C1;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Hover en enlaces del footer */
+.link a:hover {
+    color: #BA8250;
+}
+
+/* ==============================
+   MEDIA QUERY (RESPONSIVE)
+================================ */
+
+@media (max-width:991px) {
+
+    /* Ajustes del menú */
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background-color: #18171D;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    /* Ajustes del carrito */
+    .submenu:hover #carrito {
+        min-width: 350px;
+    }
+
+    /* Ajustes del header */
+    .header {
+        min-height: 0vh;
+        padding: 100px 30px;
+    }
+
+    .header-txt {
+        text-align: center;
+    }
+
+    .header-txt h1 {
+        font-size: 90px;
+        line-height: 1;
+    }
+
+    /* Ajustes sección nosotros */
+    .about {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        order: 2;
+    }
+
+    .about-img img {
+        width: 250px;
+    }
+
+    .about-txt {
+        margin-bottom: 25px;
+    }
+
+    /* Ajustes productos */
+    .products {
+        padding: 30px;
+    }
+
+    .product-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    /* Ajustes footer */
+    .footer {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

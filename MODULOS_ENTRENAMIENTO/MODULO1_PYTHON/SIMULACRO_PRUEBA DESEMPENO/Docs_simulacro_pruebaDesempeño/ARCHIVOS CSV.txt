@@ -1,0 +1,26 @@
+---- Archivos CSV ----
+
+* cuenta_acceso.csv
+	| usuario | contrasena | rol (Solo ADMIN) |
+
+	
+	- No se permiten nuevos registros de usuarios, es decir, solo se puede acceder al programa mediante una única cuenta (Cuenta ADMIN)
+
+	- El inicio de sesión se valida únicamente con el archivo cuenta.csv
+
+
+*  equipos.csv
+	| equipo_id | nombre_equipo | categoría_equipo | estado_actual_equipo | fecha_registro_equipo | descripción_equipo |
+
+
+* prestamos.csv
+	| prestamo_id | equipo_id | nombre_equipo | docmento_usuario_prestatario | tipo_usuario | fecha_solicitud | fecha_prestamo | fecha_devolucion | días_autorizados | dias_reales_usados | retraso (SI/NO) | estado | mes | anio |
+
+
+* usuarios.csv
+
+
+
+
+- LA APP DEBE LEER CSV AL INICIAR
+- ACTUALIZARSE AL REGISTRAR CAMBIOS

@@ -1,0 +1,252 @@
+/* -------------------------
+   VARIABLES GLOBALES
+-------------------------- */
+
+:root {
+    --color-primario: #004466;
+    --color-secundario: #006699;
+    --color-fondo: #f4f4f4;
+    --color-blanco: #ffffff;
+    --color-texto: #222;
+    --radio: 12px;
+}
+
+/* -------------------------
+   ESTILOS GENERALES
+-------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+html {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p, a, button, label, input, textarea {
+    font-size: 1rem;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* -------------------------
+   HEADER Y NAVEGACIÓN (FLEXBOX)
+-------------------------- */
+
+header {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+header nav ul li a,
+header nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav a:hover {
+    color: #ffd34f;
+}
+
+/* -------------------------
+   SECCIONES PRINCIPALES
+-------------------------- */
+
+#sobre-mi {
+    background: var(--color-blanco);
+}
+
+#proyectos {
+    background: #e8f2ff;
+}
+
+#contacto {
+    background: var(--color-blanco);
+}
+
+/* -------------------------
+   PROYECTOS (GRID LAYOUT)
+-------------------------- */
+
+#proyectos ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#proyectos li {
+    background: var(--color-blanco);
+    padding: 20px;
+    border-radius: var(--radio);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#proyectos a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#proyectos a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------
+   FORMULARIO DE CONTACTO
+-------------------------- */
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+button {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: var(--color-secundario);
+}
+
+/* -------------------------
+   GALERÍA DE MASCOTAS (GRID)
+-------------------------- */
+
+#galeria-mascotas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    justify-items: center;
+}
+
+#galeria-mascotas article {
+    background: var(--color-blanco);
+    padding: 15px;
+    border-radius: var(--radio);
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+#galeria-mascotas img {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+/* -------------------------
+   MEDIA QUERIES
+-------------------------- */
+
+/* MÓVILES */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #proyectos ul {
+        grid-template-columns: 1fr;
+    }
+
+    #galeria-mascotas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* TABLETS */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    #proyectos ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #galeria-mascotas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ESCRITORIO GRANDE */
+@media (min-width: 1025px) {
+
+    #proyectos ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #galeria-mascotas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

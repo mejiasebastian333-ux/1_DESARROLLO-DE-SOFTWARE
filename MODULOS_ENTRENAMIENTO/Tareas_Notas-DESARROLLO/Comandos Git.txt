@@ -1,0 +1,9 @@
+Comandos Git:
+
+- git add .
+- git commit -m"mensaje de confirmación (Ahí va cualquier observación)"
+- git push
+
+
+
+- git status (Para verificar archivos modificados)

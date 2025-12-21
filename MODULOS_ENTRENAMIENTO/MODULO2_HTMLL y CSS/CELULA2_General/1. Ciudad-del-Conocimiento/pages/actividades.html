@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades - Ciudad del Conocimiento</title>
+    <link rel="stylesheet" href="../CSS/styles_act.css">
+</head>
+
+<body id="top">
+
+<header>
+    <h1>Actividades Extracurriculares</h1>
+</header>
+
+<!--  MENÚ HORIZONTAL  -->
+<nav class="menu" role="navigation" aria-label="Menú principal">
+    <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="profesores.html">Profesores</a></li>
+        <li><a href="actividades.html" class="active">Actividades</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <!--  LISTA DE ACTIVIDADES  -->
+    <section class="card" aria-labelledby="actividades-disponibles">
+        <h2 id="actividades-disponibles">Actividades Disponibles</h2>
+        <ul class="lista-simple">
+            <li>Música</li>
+            <li>Arte y Pintura</li>
+            <li>Deportes</li>
+               
+        </ul>
+    </section>
+
+    <!-- TABLA  -->
+    <section class="card" aria-labelledby="cronograma-semanal">
+        <h2 id="cronograma-semanal">Cronograma Semanal</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Actividad</th>
+                    <th scope="col">Día</th>
+                    <th scope="col">Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Música</td>
+                    <td>Lunes</td>
+                    <td>3:00 pm - 5:00 pm</td>
+                </tr>
+                <tr>
+                    <td>Arte y Pintura</td>
+                    <td>Martes</td>
+                    <td>2:00 pm - 4:00 pm</td>
+                </tr>
+                <tr>
+                    <td>Deportes</td>
+                    <td>Miércoles</td>
+                    <td>10:00 am - 12:00 pm</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!--  MATERIALES  -->
+    <section class="card" aria-labelledby="materiales-necesarios">
+        <h2 id="materiales-necesarios">Materiales Necesarios</h2>
+
+        <ul class="materiales">
+            <li>
+                <strong>Arte y Pintura</strong>
+                <ul>
+                    <li>Pinceles (varios tamaños)</li>
+                    <li>Acuarelas / Óleos (según la clase)</li>
+                    <li>Papel especial o lienzo</li>
+                    <li>Paleta y recipientes para agua</li>
+                    <li>Delantal o ropa de trabajo</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Música</strong>
+                <ul>
+                    <li>Instrumento personal (guitarra, flauta, etc.)</li>
+                    <li>Cuaderno de pentagrama / partitura</li>
+                    <li>Lapicero y goma</li>
+                    <li>Auriculares si practican con pistas</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Deportes</strong>
+                <ul>
+                    <li>Ropa deportiva cómoda (short/pantalón deportivo, camiseta transpirable)</li>
+                    <li>Zapatillas deportivas adecuadas al deporte</li>
+                    <li>Botella de agua reutilizable</li>
+                    <li>Toalla pequeña</li>
+                    <li>Protecciones según la actividad (rodilleras, coderas, espinilleras)</li>
+                    <li>Balón o implemento personal si aplica (pelota, raqueta)</li>
+                    <li>Bolsa para ropa sucia</li>
+                    <li>Protector solar / gorra (actividades al aire libre)</li>
+                    <li>Identificación y contacto de emergencia en la bolsa (etiquetar pertenencias)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p style="font-size:0.95rem; color:#333; margin-top:12px;">
+            <em>Consejo:</em> marca los objetos personales con el nombre del participante para evitar pérdidas. Si algún material
+            tiene requisitos especiales, el profesor lo comunicará antes del inicio de la actividad.
+        </p>
+    </section>
+
+    <!--  GALERÍA  -->
+    <h2 class="titulo-galeria" id="galeria">Galería de Actividades</h2>
+
+    <!-- MÚSICA -->
+    <section class="card" aria-labelledby="galeria-musica">
+        <h2 id="galeria-musica">Música</h2>
+        <div class="carousel" id="musicCarousel" aria-roledescription="carrusel de imágenes música">
+            <div class="slides">
+                <div class="slide">
+                    <figure>
+                        <img src="../img/actividades_musica1.jpeg" alt="Niños tocando guitarra" />
+                        <figcaption>Clase de guitarra</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="../img/actividades_musica2.jpeg" alt="Grupo ensayando" />
+                        <figcaption>Ensamble</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="../img/actividades_musica3.jpeg" alt="Partituras y piano" />
+                        <figcaption>Práctica de piano</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <button class="prev" aria-label="Anterior">◀</button>
+            <button class="next" aria-label="Siguiente">▶</button>
+        </div>
+    </section>
+
+    <!-- ARTE -->
+    <section class="card" aria-labelledby="galeria-arte">
+        <h2 id="galeria-arte">Arte y Pintura</h2>
+        <div class="carousel" id="artCarousel" aria-roledescription="carrusel de imágenes arte">
+            <div class="slides">
+                <div class="slide">
+                    <figure>
+                        <img src="../img/actividades_arte1.jpeg" alt="Manos pintando un lienzo" />
+                        <figcaption>Pintura al óleo</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="../img/actividades_arte2.jpeg" alt="Taller de acuarela" />
+                        <figcaption>Taller de acuarela</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="../img/actividades_arte3.jpeg" alt="Exposición de trabajos" />
+                        <figcaption>Exposición</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <button class="prev" aria-label="Anterior">◀</button>
+            <button class="next" aria-label="Siguiente">▶</button>
+        </div>
+    </section>
+
+    <!-- DEPORTES -->
+    <section class="card" aria-labelledby="galeria-deportes">
+        <h2 id="galeria-deportes">Deportes</h2>
+        <div class="carousel" id="sportCarousel" aria-roledescription="carrusel de imágenes deportes">
+            <div class="slides">
+                <div class="slide">
+                    <figure>
+                        <img src="../img/actividades_deportes1.jpeg" alt="Partido escolar" />
+                        <figcaption>Entrenamiento en cancha</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="../img/actividades_deportes2.jpeg" alt="Grupo corriendo" />
+                        <figcaption>Cardio y resistencia</figcaption>
+                    </figure>
+                </div>
+                <div class="slide">
+                    <figure>
+                        <img src="../img/actividades_deporte3.jpeg" alt="Ejercicios de coordinación" />
+                        <figcaption>Coordinación y juegos</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <button class="prev" aria-label="Anterior">◀</button>
+            <button class="next" aria-label="Siguiente">▶</button>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© Maverick Alexis Ospina Carmona 2025</p>
+</footer>
+
+<!-- SCRIPTS  -->
+<script>
+function initCarousel(id) {
+  const carousel = document.getElementById(id);
+  if (!carousel) return;
+  const slides = carousel.querySelector('.slides');
+  const slideCount = slides.children.length;
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + slideCount) % slideCount;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+
+  if (prevBtn) prevBtn.addEventListener('click', () => showSlide(index - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => showSlide(index + 1));
+
+  // Permitir navegación con teclado cuando el carousel tiene foco
+  carousel.tabIndex = 0;
+  carousel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') showSlide(index - 1);
+    if (e.key === 'ArrowRight') showSlide(index + 1);
+  });
+
+  showSlide(0);
+}
+
+// Inicializar todos los carruseles
+initCarousel('musicCarousel');
+initCarousel('artCarousel');
+initCarousel('sportCarousel');
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,99 @@
+
+------ ESTRUCTURA ------						
+
+
+1. Gestionar equipos
+
+	1. Registrar equipo
+		° Generar id automáticamente
+		° nombre del equipo
+		° categoría del equipo
+			- Opción de seleccionar las categorías ingresadas anteriormente, en caso de no existir la categoría seleccionar la opción "otra", proceder a solicitar nombre de la categoría y agregarla a la lista de categorías.
+		° registrar estado inicial del equipo (por defecto: Disponible)
+		° fecha registro del equipo
+		° descripción (Opcional)
+
+	2. Actualizar información (Elige la opción que deseas actualizar)
+		° nombre del equipo
+		° categoría del equipo
+		° estado actual del equipo (Disponible, Prestado, Mantenimiento)
+		° descripción
+
+	3. Consultar información (Equipo especifico mediante id)
+		° Id del equipo
+		° nombre del equipo
+		° categoría del equipo
+		° estado actual del equipo (Disponible, Prestado, Mantenimiento)
+
+	4. Mostrar lista de equipos (Desde equipos.csv)
+		° Id del equipo
+		° nombre del equipo
+		° categoría del equipo
+		° estado actual del equipo (Disponible, Prestado, Mantenimiento)
+
+	5. Salir
+
+
+
+2. Gestionar solicitudes de préstamo
+
+	1. Crear nueva solicitud de préstamo
+		° Generar id solicitud automáticamente
+		° Seleccionar equipo por id: Traer el nombre del equipo mediante el id
+			- Mediante el id del equipo verificar su estado (3. consultar información), de acuerdo a este detener o continuar el registro
+		En caso de que el equipo este disponible y continúe el registro:
+		° Documento usuario prestatario
+			- Verificar si el usuario existe: en caso de que si, continuar proceso ; en caso de que no, registrar usuario (Cuando este  registrado continuar con el proceso)
+		° Seleccionar tipo de usuario (Estudiante/Instructor/Administrativo):
+			- Limite máximo de préstamo: {Estudiante = 3 días} {Instructor = 7 días} {Administrativo = 10 días}
+			- Mostrar al usuario información "Limite máximo de préstamo por tipo de usuario"
+		° Ingresar fecha de préstamo (Garantizar formato correcto)
+		° Ingresar días solicitados
+			- Garantizar que días solicitados <= días máximo por tipo de usuario: Si se cumple, crear la solicitud - Si no se cumple, mostrar mensaje con indicaciones claras y permitir un máximo de 3 intentos, en caso de superar dicho límite, rechazar la solicitud.
+
+- Si todo es válido: Guardar solicitud de préstamo con estado "Pendiente"
+
+	2. Aprobar/Rechazar solicitud de préstamo
+			- Listar solicitudes de préstamo en estado "Pendiente"
+		° Seleccionar una solicitud
+			- Mostrar estado actual del equipo
+
+- Aceptar préstamo solo si el ° estado actual del equipo es "Disponible" y no tiene prestamos pendientes sin devolver _ Cambiar estado de la solicitud de préstamo a "Aprobado" _ Cambiar estado de la solicitud de préstamo a "Prestado"
+
+- Rechazar el préstamo si el ° estado actual del equipo es "Prestado" o "Mantenimiento" _ Cambiar el estado de la solicitud de préstamo a "Rechazado"
+
+- Actualizar prestamos.csv
+
+	3. Consultar estado de solicitud de préstamo (Aprobación o rechazo)
+			- Consultar por documento de usuario en prestamos.csv
+ 
+	4. Registrar devolución de préstamos
+			- Listar solicitudes de préstamo "Aprobados" sin devolución
+		° Ingresar fecha de la devolución
+		° Calcular días reales usados (Diferencia entre fecha del préstamo y fecha d la devolución)
+			- [{(Si: días reales usados > días autorizados ; marcar retraso = SI) sino marcar retraso = NO}
+
+- Cambiar estado de préstamo a "Devuelto"
+
+- Cambiar estado del equipo a "Disponible"
+
+	5. Salir
+
+
+3. Gestionar usuarios
+	1. Registrar usuario
+	2. Actualizar información
+	3. Consultar información
+	4. Mostrar lista de usuarios
+	5. Salir
+
+4. Reportes
+	1. Consultar historial de préstamos por equipo
+			- Mostrar fechas. estado. días autorizados, retraso, mes y año
+	2. Consultar historial de préstamos por usuario
+			- Mostrar fechas. estado. días autorizados, retraso, mes y año
+	3. Reporte mes/año
+	4. Salir
+
+
+5. Salir

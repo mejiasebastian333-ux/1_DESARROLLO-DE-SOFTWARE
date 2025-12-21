@@ -1,0 +1,55 @@
+------ MENÚ ------						
+
+1. Gestionar equipos
+
+	1. Registrar equipo
+	2. Actualizar información
+	3. Consultar información
+	4. Mostrar lista de equipos
+	5. Eliminar equipo
+	6. Salir
+
+2. Gestionar solicitudes
+	1. Crear nueva solicitud de préstamo (Aprobación o rechazo)
+	2. Consultar estado de solicitud
+	3. Actualizar estado de solicitud
+	4. Registrar devolución de préstamo
+	5. Salir
+
+3. Gestionar usuarios
+	1. Registrar usuario
+	2. Actualizar información
+	3. Consultar información
+	4. Mostrar lista de usuarios
+	5. Eliminar usuario
+	6. Salir
+
+4. Reportes
+	1. Consultar historial de préstamos por equipo
+	2. Consultar historial de préstamos por usuario
+	3. Reporte mes/año
+	4. Salir
+
+5. Salir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Mejorar después:
+
+Lista de "Categorias_equipos" donde se puedan crear con id automáticos ==> Cuando se registre un equipo se pueda seleccionar la categoría y en caso no existir, opción "Otra" y nombrar su categoría (Agregar a la lista).
+
+
+

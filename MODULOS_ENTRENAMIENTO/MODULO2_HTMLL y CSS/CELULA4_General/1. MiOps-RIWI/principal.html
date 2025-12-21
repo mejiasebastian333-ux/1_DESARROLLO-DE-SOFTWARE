@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery - MiniOS</title>
+
+  <link rel="stylesheet" href="css/styles_gal.css" />
+</head>
+
+<body>
+
+  <input type="radio" name="filter" id="alt" checked hidden>
+  <input type="radio" name="filter" id="people" hidden>
+  <input type="radio" name="filter" id="natural" hidden>
+  <input type="radio" name="filter" id="art" hidden>
+  <input type="radio" name="filter" id="others" hidden>
+
+  
+  <header class="topbar">
+    <div class="app-title">Gallery</div>
+  </header>
+
+  <nav class="categories">
+    <ul>
+      <li><label for="alt" class="cat-label">All</label></li>
+      <li><label for="people" class="cat-label">People</label></li>
+      <li><label for="natural" class="cat-label">Natural</label></li>
+      <li><label for="art" class="cat-label">Art</label></li>
+      <li><label for="others" class="cat-label">Others</label></li>
+    </ul>
+  </nav>
+
+  <main class="gallery-container">
+
+    <div class="gallery-item natural">
+      <img src="img/galeria/foto1.jpeg" alt="natural 1">
+    </div>
+
+    <div class="gallery-item people">
+      <img src="img/galeria/foto2.jpg" alt="People 1">
+    </div>
+
+    <div class="gallery-item art">
+      <img src="img/galeria/foto3.jpg" alt="Art 1">
+    </div>
+
+    <div class="gallery-item people">
+      <img src="img/galeria/foto4.jpg" alt="People 2">
+    </div>
+
+    <div class="gallery-item others">
+      <img src="img/galeria/foto5.jpg" alt="others 1">
+    </div>
+
+  </main>
+
+  <footer class="bottombar">
+    <p>MiniOS - Mav Gallery</p>
+  </footer>
+
+</body>
+
+</html>

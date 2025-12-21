@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Directorio de Profesores - Ciudad del Conocimiento</title>
+
+    <!-- Importar estilos del proyecto -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+    <!-- Estilos propios para esta página -->
+    <style>
+
+        /* Tabla de profesores */
+        .tabla-profesores {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        .tabla-profesores th {
+            background: var(--nav-bg);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .tabla-profesores td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tabla-profesores tr:hover {
+            background: #f0f8ff;
+            transition: 0.3s;
+        }
+
+        /* Artículos destacados */
+        .profesor-destacado {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .profesor-destacado h3 {
+            margin-bottom: 10px;
+        }
+
+        .volver-arriba {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header id="arriba">
+        <h1>Directorio Docente</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="biblioteca.html">Biblioteca</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- TABLA PRINCIPAL -->
+        <section>
+
+            <h2>Listado de Profesores</h2>
+
+            <br>
+
+            <table class="tabla-profesores">
+
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Especialidad</th>
+                        <th>Experiencia</th>
+                        <th>Disponibilidad</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>María López</td>
+                        <td>Matemáticas</td>
+                        <td>10 años</td>
+                        <td>Lunes a Viernes</td>
+                    </tr>
+
+                    <tr>
+                        <td>Carlos Pérez</td>
+                        <td>Programación Web</td>
+                        <td>6 años</td>
+                        <td>Tardes</td>
+                    </tr>
+
+                    <tr>
+                        <td>Laura Gómez</td>
+                        <td>Biología</td>
+                        <td>8 años</td>
+                        <td>Mañanas</td>
+                    </tr>
+
+                    <tr>
+                        <td>Julián Torres</td>
+                        <td>Historia</td>
+                        <td>12 años</td>
+                        <td>Fines de semana</td>
+                    </tr>
+
+                    <tr>
+                        <td>Andrea Ríos</td>
+                        <td>Inglés</td>
+                        <td>5 años</td>
+                        <td>Lun, Mié y Vie</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <br><br><hr><br>
+
+
+        <!-- PERFILES DESTACADOS -->
+        <section>
+
+            <h2>Perfiles Destacados</h2>
+
+            <br>
+
+            <article class="profesor-destacado">
+
+                <div>
+                    <h3>Profesor Destacado: Carlos Pérez</h3>
+
+                    <p><strong>Especialidad:</strong> Desarrollo Web</p>
+
+                    <p>
+                        Ha formado a más de 200 estudiantes en HTML, CSS,
+                        JavaScript y frameworks modernos. Enfocado en aprendizaje práctico.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="profesor-destacado">
+
+                <div>
+                    <h3>Profesora Destacada: Laura Gómez</h3>
+
+                    <p><strong>Especialidad:</strong> Biología y Ciencias Naturales</p>
+
+                    <p>
+                        Integra laboratorios, proyectos y experimentación real
+                        para fomentar el pensamiento científico en los estudiantes.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <br>
+
+        
+                <a href="#arriba" style="color:blue; font-weight:bold;">Volver arriba</a>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2025 Ciudad del Conocimiento</p>
+    </footer>
+
+</body>
+
+</html>

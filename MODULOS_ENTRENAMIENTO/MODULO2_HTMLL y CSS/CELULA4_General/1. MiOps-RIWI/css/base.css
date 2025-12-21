@@ -1,0 +1,21 @@
+
+
+:root{ /*variables generales para manejar estructura tematica*/
+    --color-fondo:rgb(14, 5, 56);
+    --color-securdario:rgb(38, 22, 110);
+    --color-botones:rgb(69, 13, 224);
+    --texto_fuente:'Courier New', Courier, monospace;
+    --color-texto:rgb(255, 255, 255);
+    --color-texto-secundario:black;
+    --cajas:rgba(255, 255, 255, 0.226);
+    --border: 16px;
+    --lineas: 1px solid rgb(255, 255, 255);
+}
+html,body{ /*estilos generales del html*/
+    margin: 0;
+    padding: 0;
+    background: var(--color-fondo);
+    font-family: var(--texto_fuente);
+    color:var(--color-texto)
+}
+

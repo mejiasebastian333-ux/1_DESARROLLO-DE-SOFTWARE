@@ -1,0 +1,80 @@
+@import url(base.css);
+
+
+/* Contenedor principal del calendario */
+.calendar {
+  max-width: 800px;          /* Ancho máximo */
+  margin: 24px auto;         /* Centrado */
+}
+
+/* Título del mes */
+.month {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.evento-especial {
+   font-size:.75rem;
+    margin-top:15px;;
+   
+}
+/* Estructura de grid (7 columnas) */
+.weekdays,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* Encabezado de los días (Monday, Tuesday...) */
+.weekdays div {
+  text-align: center;
+  padding: 8px 4px;
+  font-weight: 700;
+  background: var(--color-fondo);
+  border-bottom: var(--lineas);
+}
+
+/* Cada celda del calendario */
+.days div {
+  padding: 12px 8px;
+  min-height: 60px;
+  border: var(--lineas);
+  text-align: left;
+  background: var(--color-secundario);
+}
+
+/* Celdas vacías (cuando el mes no inicia lunes) */
+.days div.empty {
+  background: var(--color-fondo);
+  color: transparent;
+}
+
+/* Número del día */
+.days div .num {
+  font-weight: 600;
+  float: right;
+  opacity: 0.9;
+}
+
+/* Día con evento: fondo destacado */
+.days div.evento {
+  background: var(--color-botones);
+  border-color: #f4e8a4;
+}
+
+/* Más legible en pantallas pequeñas */
+@media (max-width: 480px) {
+  .days div {
+    min-height: 48px;
+    padding: 8px;
+  }
+
+  .month {
+    font-size: 1.1rem;
+  }
+
+  .weekdays div {
+    font-size: 0.85rem;
+  }
+}

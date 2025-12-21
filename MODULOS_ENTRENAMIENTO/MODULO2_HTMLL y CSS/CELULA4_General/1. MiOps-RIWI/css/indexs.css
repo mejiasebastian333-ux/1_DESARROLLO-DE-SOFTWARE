@@ -1,0 +1,36 @@
+@import url(base.css);
+
+.inicial{
+    background-image: url(../img/fondo/fondo.avif);
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+
+.boton-entrar {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 40px;
+    border-radius: 50px;
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 16px var(--color-texto);
+}
+
+.boton-entrar:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
