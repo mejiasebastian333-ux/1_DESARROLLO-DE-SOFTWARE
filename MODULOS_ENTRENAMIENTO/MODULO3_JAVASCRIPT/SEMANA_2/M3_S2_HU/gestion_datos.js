@@ -1,12 +1,12 @@
 // gestion_datos.js
-// Gestión de datos con Objetos, Sets y Maps en JavaScript
-// Objetivo: Consolidar el entendimiento y aplicación de estructuras de datos avanzadas
+
 
 // =======================
 // TASK 1: Creación del objeto de productos
 // =======================
 
-// Creamos un objeto con varios productos, cada uno con id, nombre y precio*/
+// Creamos un objeto con varios productos, cada uno con id, nombre y precio
+
 const productos = {
     producto1: { id: 1, nombre: "Laptop", precio: 3500 },
     producto2: { id: 2, nombre: "Mouse", precio: 150 },
@@ -56,7 +56,7 @@ categorias.set("Pantallas", "Monitor");
 // =======================
 
 // Iterar sobre el objeto con for...in
-console.log("Propiedades y valores del objeto productos:");
+console.log("Iterar sobre el objeto con for...in; Propiedades y valores del objeto productos:");
 for (let key in productos) {
     console.log(`${key}: id=${productos[key].id}, nombre=${productos[key].nombre}, precio=${productos[key].precio}`);
 }
@@ -66,7 +66,12 @@ console.log("Object.keys(productos):", Object.keys(productos));
 console.log("Object.values(productos):", Object.values(productos));
 console.log("Object.entries(productos):", Object.entries(productos));
 
-// Iterar sobre el Set con for...of (ya mostrado arriba)
+
+// Recorrer el Set con for...of
+console.log("Recorriendo el Set con for...of:");
+for (let numero of numeros) {
+    console.log(numero);
+}
 
 // Iterar sobre el Map con forEach
 console.log("Recorriendo el Map con forEach:");
