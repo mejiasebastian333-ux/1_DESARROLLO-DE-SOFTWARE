@@ -56,7 +56,7 @@ categorias.set("Pantallas", "Monitor");
 // =======================
 
 // Iterar sobre el objeto con for...in
-console.log("Iterar sobre el objeto con for...in; Propiedades y valores del objeto productos:");
+console.log("Iterar sobre el objeto con for...in; claves y valores del objeto productos:");
 for (let key in productos) {
     console.log(`${key}: id=${productos[key].id}, nombre=${productos[key].nombre}, precio=${productos[key].precio}`);
 }
