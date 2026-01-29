@@ -179,8 +179,21 @@ try {
   console.error("Error:", error.messaje);
 }
 
-*/
+
 
 const productos = [
   {id }
 ]
+
+
+
+function saludar() {
+  return "Hola";
+}
+
+console.log(saludar())
+
+const miFuncion = saludar;
+
+*/
+
