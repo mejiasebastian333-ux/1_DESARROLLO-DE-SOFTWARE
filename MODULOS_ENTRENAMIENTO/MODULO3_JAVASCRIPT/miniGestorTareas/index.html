@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+
+  <!-- ================= PANEL PRINCIPAL ================= -->
+  <div class="container py-4" id="taskPanel">
+
+    <!-- BOTÓN CREAR -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">TaskFlow</h2>
+
+      <div class="d-flex gap-2">
+        <button id="createTask" class="btn btn-primary">
+          + Create
+        </button>
+
+        <button id="openTrash" class="btn btn-danger">
+          🗑️ Papelera
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= COLUMNAS ================= -->
+    <div class="row justify-content-center gap-3">
+
+      <!-- TASK LIST -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-header text-center fw-bold">
+            Task list
+          </div>
+          <div class="card-body" id="taskList">
+            <!-- tareas pendientes -->
+          </div>
+        </div>
+      </div>
+
+      <!-- DOING -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-header text-center fw-bold">
+            Doing
+          </div>
+          <div class="card-body" id="doing">
+            <!-- tareas en proceso -->
+          </div>
+        </div>
+      </div>
+
+      <!-- DONE -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-header text-center fw-bold">
+            Done
+          </div>
+          <div class="card-body" id="done">
+            <!-- tareas completadas -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= FORMULARIO ================= -->
+  <div class="container mt-4" id="taskForm">
+
+    <div class="card">
+      <div class="card-header fw-bold">
+        Create / Editar tarea
+      </div>
+
+      <div class="card-body">
+        <form id="formMain">
+
+          <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input
+              id="nameTask"
+              type="text"
+              class="form-control"
+              placeholder="Ingrese el título de la tarea"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Descripción</label>
+            <textarea
+              id="description"
+              class="form-control"
+              rows="3"
+              placeholder="Describe la tarea"
+              required
+            ></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Nivel de urgencia</label>
+            <select
+              id="selecPriority"
+              class="form-select"
+              required
+            >
+              <option value="">Seleccione una opción</option>
+              <option value="alta">Alta</option>
+              <option value="media">Media</option>
+              <option value="baja">Baja</option>
+            </select>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-success">
+              Guardar
+            </button>
+
+            <button
+              type="button"
+              id="cancelForm"
+              class="btn btn-secondary"
+            >
+              Cancelar
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL PAPELERA ================= -->
+  <div id="trashModal">
+    <div class="trash-box">
+
+      <h5 class="mb-3">Papelera</h5>
+
+      <div id="trashContent">
+        <p class="text-muted">No hay tareas eliminadas.</p>
+      </div>
+
+      <div class="text-end mt-3">
+        <button id="closeTrash" class="btn btn-outline-danger">
+          Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./js/main.js"></script>
+
+</body>
+</html>

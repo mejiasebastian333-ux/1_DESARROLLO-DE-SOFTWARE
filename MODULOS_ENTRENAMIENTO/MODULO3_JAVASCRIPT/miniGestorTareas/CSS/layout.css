@@ -1,0 +1,24 @@
+/*layout.css*/
+
+#taskPanel {
+  transition: all 0.3s ease;
+}
+
+#taskForm {
+  display: none;
+  max-width: 600px;
+}
+
+.card {
+  border-radius: 0.75rem;
+}
+
+.card-header {
+  background-color: #f1f3f5;
+}
+
+#taskList,
+#doing,
+#done {
+  min-height: 300px;
+}

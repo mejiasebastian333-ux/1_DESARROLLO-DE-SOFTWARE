@@ -1,0 +1,30 @@
+/*modal.css*/
+
+#trashModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.trash-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  width: 90%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#trashContent > div {
+  padding: 0.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+#trashContent > div:last-child {
+  border-bottom: none;
+}
