@@ -1,0 +1,1 @@
+// Funciones específicas del rol usuario
