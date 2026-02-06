@@ -29,6 +29,8 @@ syncButton.addEventListener("click", getProductsFromAPI);
 // INICIALIZACIÓN
 // ================================
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("📦 App iniciada");
+
   const storedProducts = localStorage.getItem("products");
 
   if (storedProducts) {
@@ -49,21 +51,14 @@ function handleAddProduct(event) {
   const price = Number(priceInput.value);
   const stock = Number(stockInput.value);
 
-  // Validaciones
   if (!name || !category || !brand || price <= 0 || stock < 0) {
-    alert("Todos los campos son obligatorios y válidos");
+    alert("Todos los campos son obligatorios");
     return;
   }
 
-  const product = {
-    name,
-    category,
-    brand,
-    price,
-    stock
-  };
-
+  const product = { name, category, brand, price, stock };
   postProductToAPI(product);
+
   form.reset();
 }
 
@@ -78,12 +73,8 @@ function renderProduct(product) {
   li.innerHTML = `
     <div>
       <p class="font-bold">${product.name}</p>
-      <p class="text-sm text-gray-600">
-        ${product.brand} | ${product.category}
-      </p>
-      <p class="text-sm">
-        💲${product.price} | Stock: ${product.stock}
-      </p>
+      <p class="text-sm text-gray-600">${product.brand} | ${product.category}</p>
+      <p class="text-sm">💲${product.price} | Stock: ${product.stock}</p>
     </div>
   `;
 
@@ -92,25 +83,25 @@ function renderProduct(product) {
   deleteButton.className =
     "bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600";
 
-  deleteButton.addEventListener("click", () => deleteProductFromAPI(product.id, li));
+  deleteButton.addEventListener("click", () =>
+    deleteProductFromAPI(product.id, li)
+  );
 
   li.appendChild(deleteButton);
   productList.appendChild(li);
 }
 
 // ================================
-// FETCH API
+// FETCH API + LOGS PERSISTENTES
 // ================================
 async function getProductsFromAPI() {
   try {
     const response = await fetch(API_URL);
-
-    if (!response.ok) {
-      throw new Error("Error al obtener productos");
-    }
-
     const data = await response.json();
-    console.log("GET API:", data);
+
+    console.group("📥 GET API");
+    console.log("Productos obtenidos:", data);
+    console.groupEnd();
 
     products = data;
     localStorage.setItem("products", JSON.stringify(products));
@@ -119,7 +110,7 @@ async function getProductsFromAPI() {
     products.forEach(product => renderProduct(product));
 
   } catch (error) {
-    console.error("GET error:", error.message);
+    console.error("❌ GET API error:", error.message);
   }
 }
 
@@ -127,45 +118,38 @@ async function postProductToAPI(product) {
   try {
     const response = await fetch(API_URL, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(product)
     });
 
-    if (!response.ok) {
-      throw new Error("Error al crear producto");
-    }
-
     const newProduct = await response.json();
-    console.log("POST API:", newProduct);
+
+    console.group("📤 POST API");
+    console.log("Producto creado:", newProduct);
+    console.groupEnd();
 
     products.push(newProduct);
     localStorage.setItem("products", JSON.stringify(products));
     renderProduct(newProduct);
 
   } catch (error) {
-    console.error("POST error:", error.message);
+    console.error("❌ POST API error:", error.message);
   }
 }
 
 async function deleteProductFromAPI(id, li) {
   try {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: "DELETE"
-    });
+    await fetch(`${API_URL}/${id}`, { method: "DELETE" });
 
-    if (!response.ok) {
-      throw new Error("Error al eliminar producto");
-    }
+    console.group("🗑️ DELETE API");
+    console.log(`Producto eliminado con id: ${id}`);
+    console.groupEnd();
 
     products = products.filter(p => p.id !== id);
     localStorage.setItem("products", JSON.stringify(products));
-
     productList.removeChild(li);
-    console.log("DELETE API: producto eliminado", id);
 
   } catch (error) {
-    console.error("DELETE error:", error.message);
+    console.error("❌ DELETE API error:", error.message);
   }
 }
