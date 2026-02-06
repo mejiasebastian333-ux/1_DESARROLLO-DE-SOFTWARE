@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUDTECH</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <div class="max-w-4xl mx-auto p-6">
+
+    <!-- TÍTULO -->
+    <h1 class="text-3xl font-bold text-center mb-6">
+      CRUDTECH – Gestión de Productos Tecnológicos
+    </h1>
+
+    <!-- FORMULARIO -->
+    <form
+      id="product-form"
+      class="bg-white p-6 rounded-lg shadow space-y-4"
+    >
+      <input
+        type="text"
+        id="product-name"
+        placeholder="Nombre del producto"
+        class="w-full border p-2 rounded"
+      />
+
+      <input
+        type="text"
+        id="product-category"
+        placeholder="Categoría (Laptop, Accesorio, etc)"
+        class="w-full border p-2 rounded"
+      />
+
+      <input
+        type="text"
+        id="product-brand"
+        placeholder="Marca"
+        class="w-full border p-2 rounded"
+      />
+
+      <input
+        type="number"
+        id="product-price"
+        placeholder="Precio"
+        class="w-full border p-2 rounded"
+      />
+
+      <input
+        type="number"
+        id="product-stock"
+        placeholder="Stock"
+        class="w-full border p-2 rounded"
+      />
+
+      <button
+        type="submit"
+        class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+      >
+        Agregar producto
+      </button>
+    </form>
+
+    <!-- BOTÓN SINCRONIZAR API -->
+    <button
+      id="sync-api"
+      class="w-full mt-4 bg-green-600 text-white py-2 rounded hover:bg-green-700"
+    >
+      Sincronizar con API
+    </button>
+
+    <!-- LISTA DE PRODUCTOS -->
+    <ul id="product-list" class="mt-6 space-y-3"></ul>
+
+  </div>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+</body>
+</html>
