@@ -1,0 +1,33 @@
+
+**Flujo de prueba de desempeño — 7 horas**
+
+1. **Leer y entender la prueba + planificación del tiempo** *(~20 min)*
+Antes de tocar cualquier herramienta, leer todo el enunciado completo para identificar los entregables, restricciones técnicas y criterios de evaluación. Luego distribuir el tiempo restante con base en la complejidad real de cada etapa.
+
+2. **Revisar y entender el documento Excel** *(~15 min)*
+Identificar entidades, atributos, tipos de datos, relaciones implícitas, datos sucios o inconsistentes que habrá que manejar al migrar.
+
+3. **DER y normalización** *(~30 min)*
+Diseñar el diagrama entidad-relación aplicando normalización (hasta 3FN normalmente). Definir PKs, FKs, constraints y tipos de datos de PostgreSQL antes de escribir una sola línea de SQL.
+
+4. **Creación de scripts SQL (DDL)** *(~20 min)*
+Escribir los scripts de creación de tablas (`CREATE TABLE`) con sus relaciones, índices y constraints. Ejecutarlos en DBeaver contra PostgreSQL. Versionar estos scripts en el proyecto desde ya (carpeta `/database/ddl.sql`).
+
+5. **Migración de datos desde Excel a PostgreSQL** *(~30 min)*
+Limpiar y transformar los datos del Excel si es necesario. Realizar la carga usando DBeaver (import wizard o scripts `INSERT`). Guardar los scripts de inserción también (`/database/seed.sql`).
+
+6. **Scripts SQL de consultas (DML/Queries)** *(~20 min)*
+Antes de tocar Express, escribir y probar en DBeaver todas las consultas SQL que la prueba requiere (SELECTs con JOINs, filtros, agregaciones, etc.). Validar que retornen los resultados correctos. Esto facilita enormemente la capa de API. Guardarlos en `/database/queries.sql`.
+
+7. **Crear API con Express + conexión a PostgreSQL** *(~30 min)*
+Montar el proyecto Node.js, instalar dependencias (`express`, `pg` o `sequelize`, `dotenv`), configurar la conexión a la base de datos y estructurar las carpetas (routes, controllers, models o similar).
+
+8. **Implementar los requerimientos de la prueba en Express** *(~2.5 horas)*
+CRUD completo, validaciones de entrada, manejo de errores, códigos HTTP correctos, y cualquier lógica de negocio que pida el enunciado. Apoyarse en las queries ya probadas del paso anterior.
+
+9. **Pruebas de los endpoints** *(~20 min)*
+Verificar todos los endpoints con Postman o Thunder Client. Cubrir casos felices y casos de error (datos inválidos, registros inexistentes, etc.).
+
+10. **README** *(~15 min)*
+Documentar: descripción del proyecto, estructura de carpetas, instrucciones de instalación y ejecución, variables de entorno necesarias, descripción de endpoints y cualquier decisión técnica relevante.
+
